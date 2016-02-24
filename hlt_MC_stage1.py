@@ -1414,7 +1414,7 @@ process.HLTtktkVtxForDmesonGlobal8Dpt20 = cms.EDProducer( "HLTDisplacedtktkVtxPr
     PreviousCandTag = cms.InputTag( "hltHIFullTrackFilterForDmesonGlobalPt8" ),
     massParticle2 = cms.double( 0.4937 ),
     ChargeOpt = cms.int32( -1 ),
-    MaxEta = cms.double( 2.0 ),
+    MaxEta = cms.double( 2.5 ),
     MaxInvMass = cms.double( 2.27 ),
     MinPtPair = cms.double( 20.0 ),
     triggerTypeDaughters = cms.int32( 91 ),
@@ -1455,7 +1455,7 @@ process.HLTtktkVtxForDmesonGlobal8Dpt60 = cms.EDProducer( "HLTDisplacedtktkVtxPr
     PreviousCandTag = cms.InputTag( "hltHIFullTrackFilterForDmesonGlobalPt8" ),
     massParticle2 = cms.double( 0.4937 ),
     ChargeOpt = cms.int32( -1 ),
-    MaxEta = cms.double( 2.0 ),
+    MaxEta = cms.double( 2.5 ),
     MaxInvMass = cms.double( 2.27 ),
     MinPtPair = cms.double( 60.0 ),
     triggerTypeDaughters = cms.int32( 91 ),
@@ -1481,7 +1481,7 @@ process.HLTtktkVtxForDmesonGlobal8Dpt40 = cms.EDProducer( "HLTDisplacedtktkVtxPr
     PreviousCandTag = cms.InputTag( "hltHIFullTrackFilterForDmesonGlobalPt8" ),
     massParticle2 = cms.double( 0.4937 ),
     ChargeOpt = cms.int32( -1 ),
-    MaxEta = cms.double( 2.0 ),
+    MaxEta = cms.double( 2.5 ),
     MaxInvMass = cms.double( 2.27 ),
     MinPtPair = cms.double( 40.0 ),
     triggerTypeDaughters = cms.int32( 91 ),
@@ -3556,13 +3556,9 @@ process.HLTBtagCSVSequenceL3CaloJet80Eta2p3 = cms.Sequence( process.hltVerticesL
 process.HLTBtagCSVSequenceL3CaloJet60Eta2p3 = cms.Sequence( process.hltVerticesL3 + process.hltFastPixelBLifetimeL3AssociatorCaloJet60Eta2p3 + process.hltFastPixelBLifetimeL3TagInfosCaloJet60Eta2p3 + process.hltL3SecondaryVertexTagInfosCaloJet60Eta2p3 + process.hltL3CombinedSecondaryVertexBJetTagsCaloJet60Eta2p3 )
 
 process.HLTriggerFirstPath = cms.Path( process.hltGetConditions + process.hltGetRaw + process.hltBoolFalse )
-
 process.HLT_DmesonTrackingGlobalPt8_Dpt20_v1 = cms.Path( process.HLTBeginSequenceBPTX + process.hltL1sMinBias + process.hltPreDmesonTrackingGlobalPt8Dpt60 + process.HLTDoHILocalPixelSequence + process.HLTHIRecopixelvetexingSequence + process.HLTDoHILocalStripSequence + process.HLTHIIterativeTrackingIteration0ForGlobalPt8 + process.HLTHIIterativeTrackingIteration1ForGlobalPt8 + process.hltHIIter1MergedForGlobalPt8 + process.HLTHIIterativeTrackingIteration2ForGlobalPt8 + process.hltHIIter2MergedForGlobalPt8 + process.hltHIFullTrackCandsForDmesonGlobalPt8 + process.hltHIFullTrackFilterForDmesonGlobalPt8 + process.HLTtktkVtxForDmesonGlobal8Dpt20 + process.HLTktkFilterForDmesonGlobal8Dp20 + process.HLTEndSequence )
-
-process.HLT_DmesonTrackingGlobalPt8_Dpt60_v1 = cms.Path( process.HLTBeginSequenceBPTX + process.hltL1sMinBias + process.hltPreDmesonTrackingGlobalPt8Dpt60 + process.HLTDoHILocalPixelSequence + process.HLTHIRecopixelvetexingSequence + process.HLTDoHILocalStripSequence + process.HLTHIIterativeTrackingIteration0ForGlobalPt8 + process.HLTHIIterativeTrackingIteration1ForGlobalPt8 + process.hltHIIter1MergedForGlobalPt8 + process.HLTHIIterativeTrackingIteration2ForGlobalPt8 + process.hltHIIter2MergedForGlobalPt8 + process.hltHIFullTrackCandsForDmesonGlobalPt8 + process.hltHIFullTrackFilterForDmesonGlobalPt8 + process.HLTtktkVtxForDmesonGlobal8Dpt60 + process.HLTktkFilterForDmesonGlobal8Dp60 + process.HLTEndSequence )
-
-process.HLT_DmesonTrackingGlobalPt8_Dpt40_v1 = cms.Path( process.HLTBeginSequenceBPTX + process.hltL1sMinBias + process.hltPreDmesonTrackingGlobalPt8Dpt60 + process.HLTDoHILocalPixelSequence + process.HLTHIRecopixelvetexingSequence + process.HLTDoHILocalStripSequence + process.HLTHIIterativeTrackingIteration0ForGlobalPt8 + process.HLTHIIterativeTrackingIteration1ForGlobalPt8 + process.hltHIIter1MergedForGlobalPt8 + process.HLTHIIterativeTrackingIteration2ForGlobalPt8 + process.hltHIIter2MergedForGlobalPt8 + process.hltHIFullTrackCandsForDmesonGlobalPt8 + process.hltHIFullTrackFilterForDmesonGlobalPt8 + process.HLTtktkVtxForDmesonGlobal8Dpt40 + process.HLTktkFilterForDmesonGlobal8Dp40 + process.HLTEndSequence )
-
+process.HLT_DmesonTrackingGlobalPt8_Dpt60_v1 = cms.Path( process.HLTBeginSequenceBPTX + process.hltL1sL1SingleJet44BptxAND + process.hltPreDmesonTrackingGlobalPt8Dpt60 + process.HLTDoHILocalPixelSequence + process.HLTHIRecopixelvetexingSequence + process.HLTDoHILocalStripSequence + process.HLTHIIterativeTrackingIteration0ForGlobalPt8 + process.HLTHIIterativeTrackingIteration1ForGlobalPt8 + process.hltHIIter1MergedForGlobalPt8 + process.HLTHIIterativeTrackingIteration2ForGlobalPt8 + process.hltHIIter2MergedForGlobalPt8 + process.hltHIFullTrackCandsForDmesonGlobalPt8 + process.hltHIFullTrackFilterForDmesonGlobalPt8 + process.HLTtktkVtxForDmesonGlobal8Dpt60 + process.HLTktkFilterForDmesonGlobal8Dp60 + process.HLTEndSequence )
+process.HLT_DmesonTrackingGlobalPt8_Dpt40_v1 = cms.Path( process.HLTBeginSequenceBPTX + process.hltL1sL1SingleJet44BptxAND + process.hltPreDmesonTrackingGlobalPt8Dpt60 + process.HLTDoHILocalPixelSequence + process.HLTHIRecopixelvetexingSequence + process.HLTDoHILocalStripSequence + process.HLTHIIterativeTrackingIteration0ForGlobalPt8 + process.HLTHIIterativeTrackingIteration1ForGlobalPt8 + process.hltHIIter1MergedForGlobalPt8 + process.HLTHIIterativeTrackingIteration2ForGlobalPt8 + process.hltHIIter2MergedForGlobalPt8 + process.hltHIFullTrackCandsForDmesonGlobalPt8 + process.hltHIFullTrackFilterForDmesonGlobalPt8 + process.HLTtktkVtxForDmesonGlobal8Dpt40 + process.HLTktkFilterForDmesonGlobal8Dp40 + process.HLTEndSequence )
 process.HLT_PuAK4CaloJet80Eta2p3_ForDmesons_v1 = cms.Path( process.HLTBeginSequence + process.hltL1sL1SingleJet28BptxAND + process.hltPrePuAK4CaloJet80Eta2p3ForDmesons + process.HLTPuAK4CaloJetsSequence + process.hltSinglePuAK4CaloJet80Eta2p3Forjets + process.eta2CaloJetsEta2p3Forjets + process.reduceJetMultEta2p3Forjets + process.jets4bTaggerCaloJet80Eta2p3Forjets + process.HLTDoHILocalPixelSequence + process.HLTHIRecopixelvetexingSequence + process.HLTDoHILocalStripSequence + process.HLTHIIterativeTrackingIteration0Forjets + process.HLTHIIterativeTrackingIteration1Forjets + process.hltHIIter1MergedForjets + process.HLTHIIterativeTrackingIteration2Forjets + process.hltHIIter2MergedForjets + process.HLTHIIterativeTrackingIteration3Forjets + process.hltHIIter3MergedForjets + process.hltHIFullTrackCandsForDmesonjets + process.hltHIFullTrackFilterForDmesonjets + process.HLTtktkVtxForDmesonjetsCaloJet80 + process.HLTktkFilterForDmesonjetsCaloJet80 + process.HLTEndSequence )
 process.HLT_PuAK4CaloJet60Eta2p3_ForDmesons_v1 = cms.Path( process.HLTBeginSequence + process.hltL1sL1SingleJet16BptxAND + process.hltPrePuAK4CaloJet60Eta2p3ForDmesons + process.HLTPuAK4CaloJetsSequence + process.hltSinglePuAK4CaloJet60Eta2p3Forjets + process.eta2CaloJetsEta2p3Forjets + process.reduceJetMultEta2p3Forjets + process.jets4bTaggerCaloJet60Eta2p3Forjets + process.HLTDoHILocalPixelSequence + process.HLTHIRecopixelvetexingSequence + process.HLTDoHILocalStripSequence + process.HLTHIIterativeTrackingIteration0Forjets + process.HLTHIIterativeTrackingIteration1Forjets + process.hltHIIter1MergedForjets + process.HLTHIIterativeTrackingIteration2Forjets + process.hltHIIter2MergedForjets + process.HLTHIIterativeTrackingIteration3Forjets + process.hltHIIter3MergedForjets + process.hltHIFullTrackCandsForDmesonjets + process.hltHIFullTrackFilterForDmesonjets + process.HLTtktkVtxForDmesonjetsCaloJet60 + process.HLTktkFilterForDmesonjetsCaloJet60 + process.HLTEndSequence )
 process.HLT_PuAK4CaloJet80Eta2p3_Forbjets_v1 = cms.Path( process.HLTBeginSequence + process.hltL1sL1SingleJet28BptxAND + process.hltPrePuAK4CaloJet80Eta2p3Forbjets + process.HLTPuAK4CaloJetsSequence + process.hltSinglePuAK4CaloJet80Eta2p3Forjets + process.eta2CaloJetsEta2p3Forjets + process.reduceJetMultEta2p3Forjets + process.jets4bTaggerCaloJet80Eta2p3Forjets + process.HLTDoHILocalPixelSequence + process.HLTHIRecopixelvetexingSequence + process.HLTDoHILocalStripSequence + process.HLTHIIterativeTrackingIteration0Forjets + process.HLTHIIterativeTrackingIteration1Forjets + process.hltHIIter1MergedForjets + process.HLTHIIterativeTrackingIteration2Forjets + process.hltHIIter2MergedForjets + process.HLTHIIterativeTrackingIteration3Forjets + process.hltHIIter3MergedForjets + process.HLTBtagCSVSequenceL3CaloJet80Eta2p3 + process.hltBLifetimeL3FilterCSVCaloJet80Eta2p3 + process.HLTEndSequence )
@@ -3634,13 +3630,13 @@ process.maxEvents = cms.untracked.PSet(
 
 # enable the TrigReport and TimeReport
 process.options = cms.untracked.PSet(
-    wantSummary = cms.untracked.bool( True )
+    wantSummary = cms.untracked.bool( False )
 )
 
 # override the GlobalTag, connection string and pfnPrefix
 if 'GlobalTag' in process.__dict__:
     from Configuration.AlCa.GlobalTag_condDBv2 import GlobalTag as customiseGlobalTag
-    process.GlobalTag = customiseGlobalTag(process.GlobalTag, globaltag = '75X_mcRun2_HeavyIon_v6')
+    process.GlobalTag = customiseGlobalTag(process.GlobalTag, globaltag = '75X_mcRun2_HeavyIon_v1')
     process.GlobalTag.connect   = 'frontier://FrontierProd/CMS_CONDITIONS'
     process.GlobalTag.pfnPrefix = cms.untracked.string('frontier://FrontierProd/')
     for pset in process.GlobalTag.toGet.value():
@@ -3704,8 +3700,8 @@ _customInfo['globalTags'][False] = "auto:run2_mc_GRun"
 _customInfo['inputFiles']={}
 _customInfo['inputFiles'][True]  = "file:RelVal_Raw_GRun_DATA.root"
 _customInfo['inputFiles'][False] = "file:RelVal_Raw_GRun_MC.root"
-_customInfo['maxEvents' ]=  20
-_customInfo['globalTag' ]= "75X_mcRun2_HeavyIon_v6"
+_customInfo['maxEvents' ]=  10
+_customInfo['globalTag' ]= "75X_mcRun2_HeavyIon_v1"
 _customInfo['inputFile' ]=  ['root://xrootd.cmsaf.mit.edu//store/user/twang/Pyquen_DiJet_pt40_5020GeV_GEN_SIM_PU_20150813/Pyquen_DiJet_pt40_5020GeV_step2_20150813/00a3c06d28c9e39d8c4f520dd28e45dd/step2_DIGI_L1_DIGI2RAW_HLT_RAW2DIGI_L1Reco_PU_103_1_NAb.root']
 _customInfo['realData'  ]=  False
 from HLTrigger.Configuration.customizeHLTforALL import customizeHLTforAll
@@ -3715,12 +3711,22 @@ process.load('L1Trigger.L1TCalorimeter.caloConfigStage1HI_cfi')
 process.caloStage1Params.regionPUSType = cms.string("zeroWall")
 process.load("HeavyIonsAnalysis.JetAnalysis.HiGenAnalyzer_cfi")
 process.load("GeneratorInterface.HiGenCommon.HeavyIon_cff")
+
+from CondCore.DBCommon.CondDBSetup_cfi import *
+process.beamspot = cms.ESSource("PoolDBESSource",CondDBSetup,
+                                toGet = cms.VPSet(cms.PSet( record = cms.string("BeamSpotObjectsRcd"),
+                                                            tag= cms.string("RealisticHICollisions2011_STARTHI50_mc")
+                                                            )),
+                                connect =cms.string("frontier://FrontierProd/CMS_COND_31X_BEAMSPOT")
+                                )
+process.es_prefer_beamspot = cms.ESPrefer("PoolDBESSource","beamspot")
+
 process.load("HLTrigger.HLTanalyzers.HLTBitAnalyser_cfi")
 process.hltbitanalysis.HLTProcessName = cms.string("TEST")
 process.hltbitanalysis.hltresults = cms.InputTag( "TriggerResults","","TEST" )
 process.hltbitanalysis.l1GtReadoutRecord = cms.InputTag("simGtDigis","","TEST")
 process.hltbitanalysis.UseTFileService = cms.untracked.bool(True)
-process.hltBitAnalysis = cms.EndPath(process.hltbitanalysis)
+#process.hltBitAnalysis = cms.EndPath(process.hltbitanalysis)
 process.TFileService = cms.Service("TFileService",
                                    fileName=cms.string("openHLT_HF.root"))
 from CondCore.DBCommon.CondDBSetup_cfi import *
@@ -3734,7 +3740,7 @@ process.es_prefer_beamspot = cms.ESPrefer("PoolDBESSource","beamspot")
 process.load('Configuration/StandardSequences/FrontierConditions_GlobalTag_condDBv2_cff')
 from Configuration.AlCa.GlobalTag_condDBv2 import GlobalTag
 recordOverrides = { ('L1RCTParametersRcd', None) : ('L1RCTParametersRcd_L1TDevelCollisions_ExtendedScaleFactorsV4_HIDisabledFGHOE', None) }
-process.GlobalTag = GlobalTag(process.GlobalTag, '75X_mcRun2_HeavyIon_v6', recordOverrides)
+process.GlobalTag = GlobalTag(process.GlobalTag, '75X_mcRun2_HeavyIon_v1', recordOverrides)
 process.GlobalTag.snapshotTime = cms.string("9999-12-31 23:59:59.000")
                                                                              
 process.HiGenParticleAna.genParticleSrc = cms.untracked.InputTag("genParticles")    
@@ -3743,8 +3749,17 @@ process.ana_step = cms.Path(process.heavyIon*
       process.HiGenParticleAna                                                      
 )                                                                                   
 
-#
-#process.Timing=cms.Service("Timing",
-#    useJobReport = cms.untracked.bool(True)
-#    )
-#
+process.load("HeavyIonsAnalysis.EventAnalysis.hltobject_cfi")
+process.hltobject.processName = cms.string("TEST")
+process.hltobject.treeName = cms.string("DMesonTrigs")
+process.hltobject.triggerNames = cms.vstring("HLT_DmesonTrackingGlobalPt8_Dpt20_v1","HLT_DmesonTrackingGlobalPt8_Dpt40_v1","HLT_DmesonTrackingGlobalPt8_Dpt60_v1","HLT_PuAK4CaloJet60Eta2p3_ForDmesons_v1","HLT_PuAK4CaloJet80Eta2p3_ForDmesons_v1")
+process.hltobject.triggerResults = process.hltbitanalysis.hltresults
+process.hltobject.triggerEvent = cms.InputTag("hltTriggerSummaryAOD","","TEST")
+
+process.hltStep = cms.EndPath(process.hltbitanalysis + process.hltobject)
+
+'''
+process.Timing=cms.Service("Timing",
+    useJobReport = cms.untracked.bool(True)
+    )
+'''
